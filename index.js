@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(router);
 app.use(cors());
 
-app.use(favicon(path.join(__dirname, 'favicon.png')));
+app.use(favicon(path.join(__dirname, 'fizzy.png')));
 
 app.listen(3001, () => {
     console.log('Server is up');
