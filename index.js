@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use(favicon(path.join(__dirname, 'favicon.png')));
 
-app.listen(3003, () => {
+app.listen(3001, () => {
     console.log('Server is up');
 });
 
@@ -27,11 +27,11 @@ app.get('/', (req, res) => {
 
 app.post('/yt/download', async (req, res) => {
     if (req.body.url && ytdl.validateURL(req.body.url)) {
-        if (req.body.type == 'mp3') {
+        if (req.body.type === 'mp3') {
             res.header('Content-Disposition', 'attachment; filename="' + new Date() + '-Fizzy.mp3"');
             ytdl(req.body.url, { format: 'mp3', filter: 'audioandvideo', quality: 'highest' }).pipe(res);
         } else {
-            if (req.body.type == 'mp4') {
+            if (req.body.type === 'mp4') {
                 res.header('Content-Disposition', 'attachment; filename="' + new Date() + '-Fizzy.mp4"');
                 ytdl(req.body.url, { format: 'mp4', filter: 'audioandvideo', quality: 'highest' }).pipe(res);
             }
