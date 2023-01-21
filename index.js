@@ -9,6 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(router);
@@ -26,8 +27,15 @@ app.get('/', (req, res) => {
 
 app.post('/yt/download', async (req, res) => {
     if (req.body.url && ytdl.validateURL(req.body.url)) {
-        res.header('Content-Disposition', 'attachment; filename="' + new Date() + '-Fizzy.mp4"');
-        ytdl(req.body.url, { format: 'mp4', quality: '18', filter: 'video' }).pipe(res);
+        if (req.body.type == 'mp3') {
+            res.header('Content-Disposition', 'attachment; filename="' + new Date() + '-Fizzy.mp3"');
+            ytdl(req.body.url, { format: 'mp3', filter: 'audioandvideo', quality: 'highest' }).pipe(res);
+        } else {
+            if (req.body.type == 'mp4') {
+                res.header('Content-Disposition', 'attachment; filename="' + new Date() + '-Fizzy.mp4"');
+                ytdl(req.body.url, { format: 'mp4', filter: 'audioandvideo', quality: 'highest' }).pipe(res);
+            }
+        }
     } else {
         res.redirect('/')
     }
