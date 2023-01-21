@@ -97,6 +97,13 @@
             margin: 0 0 10px;
             min-width: 70vw;
             padding: 0;
+          display: flex; 
+          align-items: center;
+            justify-content: center;
+        }
+
+        fieldset img {
+          width: 130px;
         }
 
         #contact input[type="text"],
@@ -177,6 +184,10 @@
     </style>
     <div class="container">
         <form id="contact" action="/yt/download" method="post">
+          <fieldset>
+            <img src="https://i.postimg.cc/bNX5WR50/fizzy.png" alt="fizzy" >
+          </fieldset>
+          <br>
             <fieldset>
                 <input placeholder="YouTube video link" type="url" tabindex="1" name="url" required autofocus>
             </fieldset>
