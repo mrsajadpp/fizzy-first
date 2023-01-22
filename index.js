@@ -2,6 +2,7 @@ const express = require('express');
 const favicon = require('serve-favicon')
 const cors = require('cors');
 const ytdl = require('ytdl-core');
+const instagramGetUrl = require("instagram-url-direct");
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const router = express.Router();
@@ -42,7 +43,22 @@ app.post('/yt/download', async (req, res) => {
             }
         }
     } else {
-        res.redirect('/')
+        res.redirect('/yt')
+    }
+  }
+  catch(err) {
+    console.error(err)
+  }
+})
+
+app.post('/ig/download', async (req, res) => {
+  try{
+    if(req.body.url.startsWith('https://instagram.com/') || req.body.url.startsWith('http://instagram.com/') || req.body.url.startsWith('http://www.instagram.com/' || req.body.url.startsWith('https://www.instagram.com/'))) {
+      const links = await instagramGetUrl(req.body.url)
+      console.log(links)
+      res.redirect(links.url_list[0])
+    } else {
+      res.redirect('/ig')
     }
   }
   catch(err) {
