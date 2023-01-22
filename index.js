@@ -52,7 +52,7 @@ app.get('/redirect', (req, res) => {
 
 app.get('/robots.txt', function (req, res, next) {
     res.type('text/plain')
-    res.send("User-agent: *\nAllow: /");
+    res.send("User-agent: *\nAllow: / \nAllow: /yt");
 });
 
 app.get('*', (req, res) => {
