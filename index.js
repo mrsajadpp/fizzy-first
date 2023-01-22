@@ -22,7 +22,11 @@ app.listen(3001, () => {
 });
 
 app.get('/yt', (req, res) => {
-    res.sendFile(__dirname + '/views/youtube.html')
+    res.sendFile(__dirname + '/views/youtube.html');
+})
+
+app.get('/ig', (req, res) => {
+  res.sendFile(__dirname + '/views/instagram.html');
 })
 
 app.post('/yt/download', async (req, res) => {
