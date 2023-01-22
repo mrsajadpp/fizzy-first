@@ -3,13 +3,13 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Instagram video downloader - Fizzy">
+    <meta name="description" content="Fizzy social video downloader powered by Trace inc">
     <meta name="image" content="https://i.postimg.cc/fy5xJCfP/icons8-downloads-64.png">
     <meta name="keywords"
         content="fizzy, trace, trace inc, traceinc, youtube, yt, free, video, download, downloader, yt video downloader, youtube to mp3, youtubedownloader, youtube videos, youtube to mp3converter, download youtube, twitter video download, chrome download, youtube downloader, convert youtube to mp3, youtube converter, youtube video download, youtube studio, youtube to mp4, download youtube video, savefrom.net, sajadpp, mrsajadpp, savefrom, youtube video download online, instagram, instagramdownloader">
     <meta name="author" content="Sajad pp">
     <meta name="application-name" content="Fizzy">
-    <title>Instagarm video downloader - Fizzy</title>
+    <title>Fizzy social video downloader</title>
     <meta name='bulletprofit' content='B4nMAP3Qg3uZ4QcERUUe' />
     <meta name="google-site-verification" content="oMpdi5KOz1JUIdNx-rPCwUKqMYMtryZO2ZZoA7Lm32I" />
     <!-- Google tag (gtag.js) -->
@@ -76,7 +76,7 @@
         #contact {
             background: #F9F9F9;
             padding: 25px;
-            margin: 150px 0;
+            margin: 10px 0;
         }
 
         #contact h3 {
@@ -128,6 +128,10 @@
             -moz-transition: border-color 0.3s ease-in-out;
             transition: border-color 0.3s ease-in-out;
             border: 1px solid #aaa;
+        }
+
+        #contact a {
+            width: 100%;
         }
 
         #contact select {
@@ -218,27 +222,23 @@
         }
     </style>
     <div class="container">
-        <form id="contact" action="/ig/download" method="post">
+        <div id="contact">
             <fieldset>
                 <img src="https://github.com/mrsajadpp/fizzy/blob/main/assets/images/fizzy.png?raw=true" alt="fizzy">
             </fieldset>
             <br>
             <fieldset>
-                <input placeholder="Instagram video link" type="url" tabindex="1" name="url" required autofocus>
+                <a href="/yt"><button type="submit" id="submit">YouTube</button></a>
             </fieldset>
             <fieldset>
-                <select tabindex="1" name="type" required autofocus>
-                    <option value="mp4">MP4</option>
-                    <option value="mp3">MP3</option>
-                </select>
+                <a href="/ig"><button type="submit" id="submit">Instagram</button></a>
             </fieldset>
-            <fieldset>
-                <button onclick="adLoad();" type="submit" id="submit">Download</button>
-            </fieldset>
-            <h4>Fizzy Instagram video downloader</h4>
-            <p class="copyright">Designed by <a href="https://linktr.ee/sajadpp" target="_blank" title="Colorlib">Sajad
-                    pp</a></p>
-        </form>
+        </div>
+        <h4>Social media video downloader</h4>
+        <br>
+        <p class="copyright">Designed by <a href="https://linktr.ee/sajadpp" target="_blank" title="Colorlib">Sajad
+                pp</a></p>
+                <br><br>
         <div class="tutorial">
             <h1>How To Use?</h1>
             <br>
@@ -312,13 +312,6 @@
             src="//pl18317569.highcpmrevenuenetwork.com/c844bb7d63d62c54208f3176a4047013/invoke.js"></script>
         <div id="container-c844bb7d63d62c54208f3176a4047013"></div>
     </div>
-    <!--<script>
-    function adLoad() {
-      setTimeout(() => {
-        location.href = '/redirect'
-      }, 3000)
-    }
-  </script>-->
     <div class="bottomAd">
         <div>
             <script type="text/javascript">

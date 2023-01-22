@@ -23,6 +23,10 @@ app.listen(3001, () => {
   console.log('Server is up');
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/index.html');
+})
+
 app.get('/yt', (req, res) => {
   res.sendFile(__dirname + '/views/youtube.html');
 })
