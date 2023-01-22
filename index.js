@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/yt/download', async (req, res) => {
+  try{
     if (req.body.url && ytdl.validateURL(req.body.url)) {
         if (req.body.type === 'mp3') {
             res.header('Content-Disposition', 'attachment; filename="' + new Date() + '-Fizzy.mp3"');
@@ -39,6 +40,10 @@ app.post('/yt/download', async (req, res) => {
     } else {
         res.redirect('/')
     }
+  }
+  catch(err) {
+    console.error(err)
+  }
 })
 
 app.get('/redirect', (req, res) => { 
@@ -48,3 +53,8 @@ app.get('/redirect', (req, res) => {
 app.get('*', (req, res) => {
   res.redirect('/')
 })
+
+app.use('/robots.txt', function (req, res, next) {
+    res.type('text/plain')
+    res.send("User-agent: *\nAllow: /");
+});
