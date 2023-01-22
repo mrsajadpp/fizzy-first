@@ -21,8 +21,8 @@ app.listen(3001, () => {
     console.log('Server is up');
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html')
+app.get('/yt', (req, res) => {
+    res.sendFile(__dirname + '/views/youtube.html')
 })
 
 app.post('/yt/download', async (req, res) => {
@@ -56,5 +56,5 @@ app.get('/robots.txt', function (req, res, next) {
 });
 
 app.get('*', (req, res) => {
-  res.redirect('/')
+  res.redirect('/yt')
 })
