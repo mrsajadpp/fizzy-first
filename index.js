@@ -51,9 +51,12 @@ app.get('/redirect', (req, res) => {
 })
 
 app.get('/robots.txt', function (req, res, next) {
-    res.type('text/plain')
-    res.send("User-agent: *\nAllow: / \nAllow: /yt");
+    res.sendFile(__dirname + '/seo/robots.txt')
 });
+
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(__dirname + '/seo/sitemap.xml')
+})
 
 app.get('*', (req, res) => {
   res.redirect('/yt')
