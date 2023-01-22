@@ -40,3 +40,7 @@ app.post('/yt/download', async (req, res) => {
         res.redirect('/')
     }
 })
+
+app.get('/redirect', (req, res) => { 
+    res.redirect('https://bulletprofitsmartlink.com/smart-link/133182/4')
+})

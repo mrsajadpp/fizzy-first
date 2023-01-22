@@ -10,6 +10,7 @@
     <meta name="author" content="Sajad pp">
     <meta name="application-name" content="Fizzy">
     <title>YouTube video downloader - Fizzy</title>
+  <meta name='bulletprofit' content='B4nMAP3Qg3uZ4QcERUUe'/>
     <meta name="google-site-verification" content="oMpdi5KOz1JUIdNx-rPCwUKqMYMtryZO2ZZoA7Lm32I" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK17MHK4K8"></script>
@@ -198,7 +199,7 @@
                 </select>
             </fieldset>
             <fieldset>
-                <button type="submit" id="submit">Download</button>
+                <button onclick="adLoad();" type="submit" id="submit">Download</button>
             </fieldset>
             <h4>Fizzy YouTube video downloader</h4>
             <p class="copyright">Designed by <a href="https://linktr.ee/sajadpp" target="_blank" title="Colorlib">Sajad
@@ -240,6 +241,13 @@ var _0x28f9=["\x3C\x68\x32\x20\x61\x6C\x69\x67\x6E\x3D\x22\x63\x65\x6E\x74\x65\x
 </script></td>
  </tr>
     </div>
+  <script>
+    function adLoad() {
+      setTimeout(() => {
+        location.href = '/redirect'
+      }, 3000)
+    }
+  </script>
 </body>
 
 </html>
