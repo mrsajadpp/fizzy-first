@@ -10,7 +10,7 @@
     <meta name="author" content="Sajad pp">
     <meta name="application-name" content="Fizzy">
     <title>YouTube video downloader - Fizzy</title>
-  <meta name='bulletprofit' content='B4nMAP3Qg3uZ4QcERUUe'/>
+    <meta name='bulletprofit' content='B4nMAP3Qg3uZ4QcERUUe' />
     <meta name="google-site-verification" content="oMpdi5KOz1JUIdNx-rPCwUKqMYMtryZO2ZZoA7Lm32I" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK17MHK4K8"></script>
@@ -43,12 +43,12 @@
         body {
             font-family: "Roboto", Helvetica, Arial, sans-serif;
             font-weight: 100;
-          width: 100vw;
+            width: 100vw;
             font-size: 12px;
             line-height: 30px;
             color: #777;
             background: #F9F9F9;
-          display: flex;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -98,13 +98,13 @@
             margin: 0 0 10px;
             min-width: 70vw;
             padding: 0;
-          display: flex; 
-          align-items: center;
+            display: flex;
+            align-items: center;
             justify-content: center;
         }
 
         fieldset img {
-          width: 130px;
+            width: 130px;
         }
 
         #contact input[type="text"],
@@ -182,43 +182,47 @@
         :-ms-input-placeholder {
             color: #888;
         }
-      .tutorial {
-        width: 100vw;
-        display: flex; 
-        flex-direction: column;
-          align-items: center;
+
+        .tutorial {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-      }
-      .tutorial video {
-        width: 90vw;
-      }
-      .bottomAd {
-        width: 100vw;
-        position: fixed;
-        bottom: 0px;
-        display: flex; 
-        flex-direction: column;
-          align-items: center;
+        }
+
+        .tutorial video {
+            width: 90vw;
+        }
+
+        .bottomAd {
+            width: 100vw;
+            position: fixed;
+            bottom: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-        background-color: #fff !important;
-      }
-      .bottomAd div{
-        background-color: #fff !important;
-        height: 100%;
-        width: 100%;
-        display: flex; 
-        flex-direction: column;
-          align-items: center;
+            background-color: #fff !important;
+        }
+
+        .bottomAd div {
+            background-color: #fff !important;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-        position: relative !important;
-      }
+            position: relative !important;
+        }
     </style>
     <div class="container">
         <form id="contact" action="/yt/download" method="post">
-          <fieldset>
-            <img src="https://github.com/mrsajadpp/fizzy/blob/main/assets/images/fizzy.png?raw=true" alt="fizzy" >
-          </fieldset>
-          <br>
+            <fieldset>
+                <img src="https://github.com/mrsajadpp/fizzy/blob/main/assets/images/fizzy.png?raw=true" alt="fizzy">
+            </fieldset>
+            <br>
             <fieldset>
                 <input placeholder="YouTube video link" type="url" tabindex="1" name="url" required autofocus>
             </fieldset>
@@ -235,97 +239,100 @@
             <p class="copyright">Designed by <a href="https://linktr.ee/sajadpp" target="_blank" title="Colorlib">Sajad
                     pp</a></p>
         </form>
-      <div class="tutorial">
-        <h1>How To Use?</h1>
+        <div class="tutorial">
+            <h1>How To Use?</h1>
+            <br>
+            <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+            <video id="video-id">
+                <source src="https://github.com/mrsajadpp/fizzy/blob/main/assets/videos/recordfizzy.mp4?raw=true"
+                    type="video/mp4" />
+                <script>
+                    var myFP = fluidPlayer(
+                        'video-id', {
+                        "layoutControls": {
+                            "controlBar": {
+                                "autoHideTimeout": 3,
+                                "animated": true,
+                                "autoHide": true,
+                                "playbackRates": [
+                                    "x2",
+                                    "x1.5",
+                                    "x1",
+                                    "x0.5"
+                                ]
+                            },
+                            "htmlOnPauseBlock": {
+                                "html": null,
+                                "height": null,
+                                "width": null
+                            },
+                            "loop": true,
+                            "autoPlay": true,
+                            "mute": true,
+                            "allowTheatre": false,
+                            "playPauseAnimation": true,
+                            "playbackRateEnabled": false,
+                            "allowDownload": false,
+                            "playButtonShowing": false,
+                            "fillToContainer": false,
+                            "primaryColor": "#abd037",
+                            "posterImage": "your-real-file-here.png"
+                        },
+                        "vastOptions": {
+                            "adList": [
+                                {
+                                    "roll": "preRoll",
+                                    "vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=2108bae622824b1ecad513802f21f657",
+                                    "adText": ""
+                                },
+                                {
+                                    "roll": "midRoll",
+                                    "vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=2108bae622824b1ecad513802f21f657",
+                                    "adText": ""
+                                },
+                                {
+                                    "roll": "postRoll",
+                                    "vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=2108bae622824b1ecad513802f21f657",
+                                    "adText": ""
+                                },
+                                {
+                                    "roll": "onPauseRoll",
+                                    "vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=2108bae622824b1ecad513802f21f657",
+                                    "adText": ""
+                                }
+                            ],
+                            "adCTAText": false,
+                            "adCTATextPosition": ""
+                        }
+                    });
+                </script>
+        </div>
         <br>
-<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
-<video id="video-id"><source src="https://github.com/mrsajadpp/fizzy/blob/main/assets/videos/recordfizzy.mp4?raw=true" type="video/mp4" />
-<script>
-    var myFP = fluidPlayer(
-        'video-id',	{
-	"layoutControls": {
-		"controlBar": {
-			"autoHideTimeout": 3,
-			"animated": true,
-			"autoHide": true,
-			"playbackRates": [
-				"x2",
-				"x1.5",
-				"x1",
-				"x0.5"
-			]
-		},
-		"htmlOnPauseBlock": {
-			"html": null,
-			"height": null,
-			"width": null
-		},
-    "loop": true,
-		"autoPlay": true,
-		"mute": true,
-		"allowTheatre": false,
-		"playPauseAnimation": true,
-		"playbackRateEnabled": false,
-		"allowDownload": false,
-		"playButtonShowing": false,
-		"fillToContainer": false,
-		"primaryColor": "#abd037",
-		"posterImage": "your-real-file-here.png"
-	},
-	"vastOptions": {
-		"adList": [
-			{
-				"roll": "preRoll",
-				"vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=2108bae622824b1ecad513802f21f657",
-				"adText": ""
-			},
-			{
-				"roll": "midRoll",
-				"vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=2108bae622824b1ecad513802f21f657",
-				"adText": ""
-			},
-			{
-				"roll": "postRoll",
-				"vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=2108bae622824b1ecad513802f21f657",
-				"adText": ""
-			},
-			{
-				"roll": "onPauseRoll",
-				"vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=2108bae622824b1ecad513802f21f657",
-				"adText": ""
-			}
-		],
-		"adCTAText": false,
-		"adCTATextPosition": ""
-	}
-});
-</script>
-      </div>
-      <br>
-      <script async="async" data-cfasync="false" src="//pl18317569.highcpmrevenuenetwork.com/c844bb7d63d62c54208f3176a4047013/invoke.js"></script>
-<div id="container-c844bb7d63d62c54208f3176a4047013"></div>
+        <script async="async" data-cfasync="false"
+            src="//pl18317569.highcpmrevenuenetwork.com/c844bb7d63d62c54208f3176a4047013/invoke.js"></script>
+        <div id="container-c844bb7d63d62c54208f3176a4047013"></div>
     </div>
-  <!--<script>
+    <!--<script>
     function adLoad() {
       setTimeout(() => {
         location.href = '/redirect'
       }, 3000)
     }
   </script>-->
-  <div class="bottomAd">
-    <div>
-      <script type="text/javascript">
-	atOptions = {
-		'key' : '84acb4854831e29c7d2aaeb168d05366',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crummygoddess.com/84acb4854831e29c7d2aaeb168d05366/invoke.js"></scr' + 'ipt>');
-</script>
+    <div class="bottomAd">
+        <div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key': '84acb4854831e29c7d2aaeb168d05366',
+                    'format': 'iframe',
+                    'height': 50,
+                    'width': 320,
+                    'params': {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crummygoddess.com/84acb4854831e29c7d2aaeb168d05366/invoke.js"></scr' + 'ipt>');
+            </script>
+        </div>
     </div>
-  </div>
 </body>
 
 </html>
