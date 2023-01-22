@@ -50,11 +50,11 @@ app.get('/redirect', (req, res) => {
   res.redirect('https://crummygoddess.com/er1ve5sd?key=e6188672a68270ff022916ce0d547b24')
 })
 
-app.get('*', (req, res) => {
-  res.redirect('/')
-})
-
-app.use('/robots.txt', function (req, res, next) {
+app.get('/robots.txt', function (req, res, next) {
     res.type('text/plain')
     res.send("User-agent: *\nAllow: /");
 });
+
+app.get('*', (req, res) => {
+  res.redirect('/')
+})
