@@ -42,5 +42,5 @@ app.post('/yt/download', async (req, res) => {
 })
 
 app.get('/redirect', (req, res) => { 
-  res.redirect('https://www.highcpmrevenuenetwork.com/er1ve5sd?key=e6188672a68270ff022916ce0d547b24')
+  res.redirect('https://crummygoddess.com/er1ve5sd?key=e6188672a68270ff022916ce0d547b24')
 })
