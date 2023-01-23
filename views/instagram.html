@@ -12,6 +12,8 @@
     <title>Instagarm video downloader - Fizzy</title>
     <meta name='bulletprofit' content='B4nMAP3Qg3uZ4QcERUUe' />
     <meta name="google-site-verification" content="oMpdi5KOz1JUIdNx-rPCwUKqMYMtryZO2ZZoA7Lm32I" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK17MHK4K8"></script>
     <script>
@@ -46,8 +48,8 @@
             width: 100vw;
             font-size: 12px;
             line-height: 30px;
-            color: #777;
-            background: #F9F9F9;
+            color: #888888;
+            background: #0f0f0f;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -74,7 +76,7 @@
         }
 
         #contact {
-            background: #F9F9F9;
+            background: #0f0f0f;
             padding: 25px;
             margin: 150px 0;
         }
@@ -113,10 +115,13 @@
         #contact input[type="url"],
         #contact select {
             width: 100%;
-            border: 1px solid #ccc;
-            background: #FFF;
+            border: 1px solid #888888;
+            color: #888888;
+            background: #121212;
             margin: 0 0 5px;
             padding: 10px;
+            border-radius: 50px;
+            height: 44px;
         }
 
         #contact input[type="text"]:hover,
@@ -127,27 +132,33 @@
             -webkit-transition: border-color 0.3s ease-in-out;
             -moz-transition: border-color 0.3s ease-in-out;
             transition: border-color 0.3s ease-in-out;
-            border: 1px solid #aaa;
+            border: 1px solid #888888;
         }
 
         #contact select {
             max-width: 100%;
             resize: none;
+            color: #888888;
         }
 
         #contact button[type="submit"] {
             cursor: pointer;
             width: 100%;
             border: none;
-            background: #4CAF50;
+            background: #dd2abd;
             color: #FFF;
             margin: 0 0 5px;
             padding: 10px;
             font-size: 15px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
         }
 
         #contact button[type="submit"]:hover {
-            background: #43A047;
+            background: #dd2abd;
             -webkit-transition: background 0.3s ease-in-out;
             -moz-transition: background 0.3s ease-in-out;
             transition: background-color 0.3s ease-in-out;
@@ -203,11 +214,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #fff !important;
+            background-color: #121212 !important;
         }
 
         .bottomAd div {
-            background-color: #fff !important;
+            background-color: #121212 !important;
             height: 100%;
             width: 100%;
             display: flex;
@@ -233,7 +244,7 @@
                 </select>
             </fieldset>
             <fieldset>
-                <button onclick="adLoad();" type="submit" id="submit">Download</button>
+                <button onclick="adLoad();" type="submit" id="submit"><box-icon name='cloud-download' type='solid' color='#ffffff' ></box-icon></button>
             </fieldset>
             <h4>Fizzy Instagram video downloader</h4>
             <p class="copyright">Designed by <a href="https://linktr.ee/sajadpp" target="_blank" title="Colorlib">Sajad
