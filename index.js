@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(router);
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use(favicon(path.join(__dirname, '/assets/images/', 'favicon.png')));
 
