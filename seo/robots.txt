@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 Allow: /yt
 Allow: /ig
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.mp4$
+
+Sitemap: https://fizzy.sajadpp.repl.co/sitemap.xml
