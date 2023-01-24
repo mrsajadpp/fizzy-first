@@ -2,6 +2,7 @@ const express = require('express');
 const favicon = require('serve-favicon')
 const cors = require('cors');
 const ytdl = require('ytdl-core');
+const Spotify = require('spotifydl-core').default
 const instagramGetUrl = require("instagram-url-direct");
 const http = require('http');
 const bodyParser = require('body-parser');
@@ -11,6 +12,12 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
+const credentials = {
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET
+}
+
+const spotify = new Spotify(credentials);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -34,6 +41,10 @@ app.get('/yt', (req, res) => {
 
 app.get('/ig', (req, res) => {
   res.sendFile(__dirname + '/views/instagram.html');
+})
+
+app.get('/spotify', (req, res) => {
+  res.sendFile(__dirname + '/views/spotify.html');
 })
 
 app.post('/yt/download', async (req, res) => {
@@ -75,6 +86,21 @@ app.post('/ig/download', async (req, res) => {
     }
   }
   catch (err) {
+    console.error(err)
+  }
+})
+
+app.post('/ab/download', async (req, res) => {
+  try {
+    if (req.body.url.startsWith('https://open.spotify.com/') || req.body.url.startsWith('http://open.spotify.com/')) {
+      res.header('Content-Disposition', 'attachment; filename="' + new Date() + '| Spotify - Fizzy.mp3"');
+      let song = await spotify.downloadTrack(req.body.url);
+      res.write(song, 'binary');
+      res.end();
+    } else {
+      res.redirect('/spotify')
+    }
+  } catch (err) {
     console.error(err)
   }
 })

@@ -3,13 +3,13 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fizzy social video downloader powered by Trace inc">
+    <meta name="description" content="Spotify audio downloader - Fizzy">
     <meta name="image" content="https://i.postimg.cc/fy5xJCfP/icons8-downloads-64.png">
     <meta name="keywords"
         content="fizzy, trace, trace inc, traceinc, youtube, yt, free, video, download, downloader, yt video downloader, youtube to mp3, youtubedownloader, youtube videos, youtube to mp3converter, download youtube, twitter video download, chrome download, youtube downloader, convert youtube to mp3, youtube converter, youtube video download, youtube studio, youtube to mp4, download youtube video, savefrom.net, sajadpp, mrsajadpp, savefrom, youtube video download online, instagram, instagramdownloader">
     <meta name="author" content="Sajad pp">
     <meta name="application-name" content="Fizzy">
-    <title>Fizzy social video downloader</title>
+    <title>Spotify audio downloader - Fizzy</title>
     <meta name='bulletprofit' content='B4nMAP3Qg3uZ4QcERUUe' />
     <meta name="google-site-verification" content="oMpdi5KOz1JUIdNx-rPCwUKqMYMtryZO2ZZoA7Lm32I" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -141,16 +141,11 @@
             color: #888888;
         }
 
-        #contact a {
-            width: 100%;
-            text-decoration: none;
-        }
-
         #contact button[type="submit"] {
             cursor: pointer;
             width: 100%;
             border: none;
-            background: #dd2abd;
+            background: #1db954;
             color: #FFF;
             margin: 0 0 5px;
             padding: 10px;
@@ -163,7 +158,7 @@
         }
 
         #contact button[type="submit"]:hover {
-            background: #dd2abd;
+            background: #1db954;
             -webkit-transition: background 0.3s ease-in-out;
             -moz-transition: background 0.3s ease-in-out;
             transition: background-color 0.3s ease-in-out;
@@ -234,26 +229,28 @@
         }
     </style>
     <div class="container">
-        <div id="contact">
+        <form id="contact" action="/ab/download" method="post">
             <fieldset>
                 <img src="https://github.com/mrsajadpp/fizzy/blob/main/assets/images/fizzy.png?raw=true" alt="fizzy">
             </fieldset>
             <br>
-            <fieldset> 
-                <a href="/spotify"><button style="background-color: #1db954;" type="submit" id="submit"><box-icon name='spotify' type='logo' color='#ffffff' ></box-icon>&nbsp;+&nbsp;<box-icon name='cloud-download' type='solid' color='#ffffff' ></box-icon></button></a>
-            </fieldset>
             <fieldset>
-                <a href="/yt"><button style="background-color: #ff0047;" type="submit" id="submit"><box-icon name='youtube' type='logo' color='#ffffff' ></box-icon>&nbsp;+&nbsp;<box-icon name='cloud-download' type='solid' color='#ffffff' ></box-icon></button></a>
+                <input placeholder="Spotify track link" type="url" tabindex="1" name="url" required autofocus>
             </fieldset>
-            <fieldset> 
-                <a href="/ig"><button type="submit" id="submit"><box-icon name='instagram-alt' type='logo' color='#ffffff' ></box-icon>&nbsp;+&nbsp;<box-icon name='cloud-download' type='solid' color='#ffffff' ></box-icon></button></a>
+            <!--<fieldset>
+                <select tabindex="1" name="type" required autofocus>
+                    <option value="mp4">MP4</option>
+                    <option value="mp3">MP3</option>
+                </select>
+            </fieldset>-->
+            <fieldset>
+                <button onclick="adLoad();" type="submit" id="submit"><box-icon name='cloud-download' type='solid'
+                        color='#ffffff'></box-icon></button>
             </fieldset>
-        </div>
-        <h4>Social media video downloader</h4>
-        <br>
-        <p class="copyright">Designed by <a href="https://linktr.ee/sajadpp" target="_blank" title="Colorlib">Sajad
-                pp</a></p>
-        <br><br>
+            <h4>Fizzy Spotify song downloader</h4>
+            <p class="copyright">Designed by <a href="https://linktr.ee/sajadpp" target="_blank" title="Colorlib">Sajad
+                    pp</a></p>
+        </form>
         <div class="tutorial">
             <h1>How To Use?</h1>
             <br>
@@ -326,9 +323,14 @@
         <script async="async" data-cfasync="false"
             src="//pl18317569.highcpmrevenuenetwork.com/c844bb7d63d62c54208f3176a4047013/invoke.js"></script>
         <div id="container-c844bb7d63d62c54208f3176a4047013"></div>
-
-
     </div>
+    <!--<script>
+    function adLoad() {
+      setTimeout(() => {
+        location.href = '/redirect'
+      }, 3000)
+    }
+  </script>-->
     <div class="bottomAd">
         <div>
             <script type="text/javascript">
