@@ -47,7 +47,7 @@ app.get('/spotify', (req, res) => {
   res.sendFile(__dirname + '/views/spotify.html');
 })
 
-app.post('/yt/download', async (req, res) => {
+/*app.post('/yt/download', async (req, res) => {
   try {
     if (req.body.url && ytdl.validateURL(req.body.url)) {
       if (req.body.type === 'mp3') {
@@ -103,7 +103,7 @@ app.post('/ab/download', async (req, res) => {
   } catch (err) {
     console.error(err)
   }
-})
+})*/
 
 app.get('/redirect', (req, res) => {
   res.redirect('https://crummygoddess.com/er1ve5sd?key=e6188672a68270ff022916ce0d547b24')
