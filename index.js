@@ -1,9 +1,6 @@
 const express = require('express');
 const favicon = require('serve-favicon')
 const cors = require('cors');
-const ytdl = require('ytdl-core');
-const Spotify = require('spotifydl-core').default
-const instagramGetUrl = require("instagram-url-direct");
 const http = require('http');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -11,13 +8,6 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 const app = express();
-
-const credentials = {
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
-}
-
-const spotify = new Spotify(credentials);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
